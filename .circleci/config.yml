@@ -10,6 +10,7 @@ jobs:
       - checkout
       - node/install:
         node-version: '16.13'
+      - run: node --version
       - run:
           name: Front-End Install
           command: |
