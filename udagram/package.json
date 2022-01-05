@@ -1,5 +1,7 @@
 
 {
-    "scripts": {},
+    "scripts": {
+        "frontend:build": "cd udagram-frontend && npm run build"
+    },
     "devDependencies": {}
 }
