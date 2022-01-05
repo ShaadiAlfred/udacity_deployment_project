@@ -12,4 +12,8 @@ jobs:
       - run:
           name: Front-End Install
           command: |
-            cd udagram-frontend && npm install
+            npm run frontend:install
+
+          name: Front-End Build
+          command: |
+            npm run frontend:build
