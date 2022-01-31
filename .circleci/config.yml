@@ -35,8 +35,10 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
+      - checkout
       - node/install:
           node-version: "16.13"
+      - aws-cli/setup
       - run:
           name: Upload front-end
           command: |
