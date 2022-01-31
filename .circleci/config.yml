@@ -32,7 +32,6 @@ jobs:
             npm run backend:build
 
   deploy:
-    executor: aws-cli/default
     docker:
       - image: "cimg/base:stable"
     steps:
