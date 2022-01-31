@@ -5,10 +5,12 @@ orbs:
   aws-s3: circleci/aws-s3@3.0
 jobs:
   build:
+    working_directory: ~/udacity_deployment_project
     docker:
       - image: "cimg/base:stable"
     steps:
-      - checkout
+      - checkout:
+          path: ~/udacity_deployment_project
       - aws-cli/setup
       - node/install:
           node-version: "16.13"
@@ -36,4 +38,4 @@ jobs:
       - run:
           name: Deploy Front-End
           command: |
-            cd udagram_frontend/www && aws s3 sync --acl public-read --cache-control "max-age=86400" --delete
+            cd ~/udacity_deployment_project/udagram_frontend/www && aws s3 sync --acl public-read --cache-control "max-age=86400" --delete
