@@ -33,6 +33,25 @@ jobs:
           command: |
             npm run backend:build
 
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - udagram_frontend/www
+            - udagram_api/www
+
+  deploy:
+    docker:
+      - image: "cimg/base:stable"
+
+    working_directory: $CIRCLE_WORKING_DIRECTORY
+
+    steps:
+      - attach_workspace:
+          at: $CIRCLE_WORKING_DIRECTORY
+      - aws-cli/setup
+      - node/install:
+          node-version: "16.13"
+
       - aws-s3/sync:
           arguments: |
             --acl public-read \
@@ -41,5 +60,15 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-region: AWS_REGION
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          from: "./udagram_frontend/www"
+          from: "udagram_frontend/www"
           to: "s3://my-udagram-frontend"
+
+workflows:
+  version: 2
+
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
