@@ -41,5 +41,5 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-region: AWS_REGION
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          from: udagram_frontend/www
+          from: "./udagram_frontend/www"
           to: "s3://my-udagram-frontend"
