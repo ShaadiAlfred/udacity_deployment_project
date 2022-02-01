@@ -38,4 +38,4 @@ jobs:
       - run:
           name: Deploy Front-End
           command: |
-            cd ~/udacity_deployment_project/udagram_frontend/www && aws s3 sync --acl public-read --cache-control "max-age=86400" --delete
+            npm run frontend:build && cd udagram_frontend/www && aws s3 sync --acl public-read --cache-control "max-age=86400" --delete
