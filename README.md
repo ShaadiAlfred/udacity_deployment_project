@@ -1,4 +1,4 @@
-[![ShaadiAlfred](https://circleci.com/gh/ShaadiAlfred/udacity_deployment_project?style=svg)](https://app.circleci.com/pipelines/github/ShaadiAlfred/udacity_deployment_project)
+[![CircleCI](https://circleci.com/gh/ShaadiAlfred/udacity_deployment_project/tree/master.svg?style=svg)](https://circleci.com/gh/ShaadiAlfred/udacity_deployment_project/tree/master)
 
 # Infrastructure
 - RDS (Postgres DB)

@@ -4,12 +4,16 @@ orbs:
   aws-cli: circleci/aws-cli@1.3.1
   aws-s3: circleci/aws-s3@3.0
   eb: circleci/aws-elastic-beanstalk@2.0.1
+  browser-tools: circleci/browser-tools@1.2.4
+
 jobs:
   build:
     working_directory: ~/udacity_deployment_project
     docker:
       - image: "cimg/base:stable"
     steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - checkout:
           path: ~/udacity_deployment_project
       - setup_remote_docker:
