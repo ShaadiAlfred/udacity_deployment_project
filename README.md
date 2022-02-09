@@ -31,3 +31,15 @@
 ![Web capture_1-2-2022_22433_console aws amazon com](https://user-images.githubusercontent.com/3685582/152055176-8342cddb-fa6f-4e76-a627-3f8030174821.jpeg)
 ![Web capture_1-2-2022_22417_console aws amazon com](https://user-images.githubusercontent.com/3685582/152055183-e98116c5-6a84-4673-bf60-ec3579a3a20d.jpeg)
 ![image](https://user-images.githubusercontent.com/3685582/152055886-560c0338-e297-4b20-9389-38a76cbbbe25.png)
+
+# AWS services status
+![Web capture_9-2-2022_124421_s3 console aws amazon com](https://user-images.githubusercontent.com/3685582/153182301-484fe282-a4cd-4888-a60a-a144c2c467d1.jpeg)
+![Web capture_9-2-2022_124347_console aws amazon com](https://user-images.githubusercontent.com/3685582/153182315-063361a9-b6b6-40dd-af47-b39b9d9b88d3.jpeg)
+![1](https://user-images.githubusercontent.com/3685582/153182326-1d20f396-7281-4748-bbf6-778594a9eb18.jpeg)
+
+# CircleCi environment variables
+![Web capture_9-2-2022_12465_app circleci com](https://user-images.githubusercontent.com/3685582/153182586-af81516e-80e5-442a-ab13-46490c7dc12f.jpeg)
+
+# Infrastructure diagram
+![diagram](https://user-images.githubusercontent.com/3685582/153182732-fb61d40d-94b2-42a6-a860-1f3ff0a9f5a8.png)
+
