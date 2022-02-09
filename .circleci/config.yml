@@ -6,10 +6,6 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
-    filters:
-      branches:
-        only: master
-
     working_directory: ~/udacity_deployment_project
     docker:
       - image: "cimg/base:stable"
@@ -57,3 +53,12 @@ jobs:
           name: Deploy Front-End
           command: |
             npm run frontend:deploy
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
