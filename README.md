@@ -14,12 +14,11 @@
 
 # Pipeline Process
 1. Installing frontend dependencies
-2. Running frontend tests
-3. Building frontend
-4. Installing backend dependencies
-5. Building backend
-6. Deploying backend (zipping contents of `udagram-api/www` directory, and uploading it with `eb`)
-7. Deploying frontend (synching contents `udagram-fronted/www` to the s3 bucket with `aws s3`)
+2. Building frontend
+3. Installing backend dependencies
+4. Building backend
+5. Deploying backend (zipping contents of `udagram-api/www` directory, and uploading it with `eb`)
+6. Deploying frontend (synching contents `udagram-fronted/www` to the s3 bucket with `aws s3`)
 
 
 # Config images
