@@ -2,8 +2,11 @@
     "scripts": {
         "backend:install": "cd udagram-api && npm install",
         "backend:build": "cd udagram-api && npm run build",
+        "backend:deploy": "cd udagram-api && eb deploy",
         "frontend:install": "cd udagram-frontend && npm install --force",
-        "frontend:build": "cd udagram-frontend && npm run build -- --prod"
+        "frontend:test": "cd udagram-frontend && npm run test",
+        "frontend:build": "cd udagram-frontend && npm run build -- --prod",
+        "frontend:deploy": "aws s3 sync udagram-frontend/www s3://my-udagram-frontend --cache-control \"max-age=86400\" --delete"
     },
     "devDependencies": {}
 }

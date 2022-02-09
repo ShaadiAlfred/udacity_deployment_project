@@ -6,12 +6,18 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
+    filters:
+      branches:
+        only: master
+
     working_directory: ~/udacity_deployment_project
     docker:
       - image: "cimg/base:stable"
     steps:
       - checkout:
           path: ~/udacity_deployment_project
+      - setup_remote_docker:
+          docker_layer_caching: true
       - aws-cli/setup
       - eb/setup
       - node/install:
@@ -21,6 +27,11 @@ jobs:
           name: Front-End Install
           command: |
             npm run frontend:install
+
+      - run:
+          name: Front-End Test
+          command: |
+            npm run frontend:test
 
       - run:
           name: Front-End Build
@@ -40,9 +51,9 @@ jobs:
       - run:
           name: Deploy Back-End
           command: |
-            cd udagram-api && eb deploy && cd ..
+            npm run backend:deploy
 
       - run:
           name: Deploy Front-End
           command: |
-            aws s3 sync udagram-frontend/www s3://my-udagram-frontend --cache-control "max-age=86400" --delete
+            npm run frontend:deploy

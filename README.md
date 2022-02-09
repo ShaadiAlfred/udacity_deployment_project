@@ -1,9 +1,26 @@
-# Tools used
-- CircleCi
-Config can be found in `.circleci/config.yml`
-- aws cli
-- eb
-- rds
+[![ShaadiAlfred](https://circleci.com/gh/ShaadiAlfred/udacity_deployment_project?style=svg)](https://app.circleci.com/pipelines/github/ShaadiAlfred/udacity_deployment_project)
+
+# Infrastructure
+- RDS (Postgres DB)
+- EC2
+- S3
+
+# App Dependencies
+- NodeJS
+- Ionic Frameword
+- TypeScript
+- sequelize
+- express
+
+# Pipeline Process
+1. Installing frontend dependencies
+2. Running frontend tests
+3. Building frontend
+4. Installing backend dependencies
+5. Building backend
+6. Deploying backend (zipping contents of `udagram-api/www` directory, and uploading it with `eb`)
+7. Deploying frontend (synching contents `udagram-fronted/www` to the s3 bucket with `aws s3`)
+
 
 # Config images
 ![Web capture_1-2-2022_223128_s3 console aws amazon com](https://user-images.githubusercontent.com/3685582/152055145-fec41a2b-e3ea-48c7-a6dd-694eb50cb252.jpeg)
