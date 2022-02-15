@@ -1,5 +1,13 @@
 [![CircleCI](https://circleci.com/gh/ShaadiAlfred/udacity_deployment_project/tree/master.svg?style=svg)](https://circleci.com/gh/ShaadiAlfred/udacity_deployment_project/tree/master)
 
+# Links
+- Backend:
+http://udagram-api-dev2.us-east-1.elasticbeanstalk.com/
+- Frontend:
+http://my-udagram-frontend.s3-website-us-east-1.amazonaws.com/
+
+> N.B. if the app doesn't work, the credit given to me by Udacity probably has depleted. However, the last reviewer made sure that the app was working well, it was only missing the docs, which I have added in the `docs` directory.
+
 # Infrastructure
 - RDS (Postgres DB)
 - EC2
